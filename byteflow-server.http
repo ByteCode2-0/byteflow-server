@@ -1,0 +1,6 @@
+@byteflow_server_HostAddress = http://localhost:5166
+
+GET {{byteflow_server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
