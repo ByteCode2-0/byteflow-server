@@ -1,0 +1,68 @@
+# Build Folders
+bin/
+obj/
+*.vs
+# User-Specific Files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Logs
+*.log
+
+# Visual Studio Code
+.vscode/
+.vscode/*
+
+# Rider
+.idea/
+.idea/*
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
+
+# Packages
+*.nupkg
+*.snupkg
+
+# Environment Variables
+.env
+.env.*
+
+# Configuration
+appsettings.json
+appsettings.*.json
+
+# HTTP Client
+*.http
+*.rest
+
+# Temporary Files
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# Coverage
+coverage/
+*.coverage
+*.coveragexml
+*.codecov
+
+# Generated Files
+*.generated.cs
+*.g.cs
+*.g.i.cs
+
+# Entity Framework Migrations
+Migrations/
+
+# Publish Output
+publish/
+wwwroot/

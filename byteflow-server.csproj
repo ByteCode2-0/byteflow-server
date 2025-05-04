@@ -23,4 +23,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Repositories\Interfaces\" />
+    <Folder Include="Repositories\Implementations\" />
+  </ItemGroup>
+
 </Project>

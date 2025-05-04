@@ -56,7 +56,8 @@ namespace byteflow_server.Controllers
             var claim = new[]
             {
                 new Claim(JwtRegisteredClaimNames.Sub, user.UserName ?? string.Empty), 
-                new Claim(JwtRegisteredClaimNames.Jti, user.UserId.ToString())
+                new Claim(JwtRegisteredClaimNames.Jti, user.UserId.ToString()),
+                new Claim(ClaimTypes.Role, user.Role ?? string.Empty)
             };
 
             var token = new JwtSecurityToken(
