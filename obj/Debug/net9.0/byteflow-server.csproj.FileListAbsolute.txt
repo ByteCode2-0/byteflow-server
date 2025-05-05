@@ -169,3 +169,4 @@ D:\Projects\ByteFlow\byteflow-server\obj\Debug\net9.0\staticwebassets.upToDateCh
 D:\Projects\ByteFlow\byteflow-server\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\Projects\ByteFlow\byteflow-server\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\Projects\ByteFlow\byteflow-server\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Projects\ByteFlow\byteflow-server\bin\Debug\net9.0\package-lock.json

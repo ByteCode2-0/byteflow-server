@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("byteflow-server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c59b4ac675018417fdfb40b3e05cef51cdac8f94")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+482305f0d345660c98c197e997e0acf5e0bb7a5a")]
 [assembly: System.Reflection.AssemblyProductAttribute("byteflow-server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("byteflow-server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
