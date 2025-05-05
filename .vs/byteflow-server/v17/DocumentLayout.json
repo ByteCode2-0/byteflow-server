@@ -3,24 +3,44 @@
   "WorkspaceRootPath": "D:\\Projects\\ByteFlow\\byteflow-server\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|d:\\projects\\byteflow\\byteflow-server\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|d:\\projects\\byteflow\\byteflow-server\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|d:\\projects\\byteflow\\byteflow-server\\byteflow-server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|solutionrelative:byteflow-server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|d:\\projects\\byteflow\\byteflow-server\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|d:\\projects\\byteflow\\byteflow-server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|d:\\projects\\byteflow\\byteflow-server\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|solutionrelative:controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|d:\\projects\\byteflow\\byteflow-server\\services\\iattendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|solutionrelative:services\\iattendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|d:\\projects\\byteflow\\byteflow-server\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|solutionrelative:models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|d:\\projects\\byteflow\\byteflow-server\\controllers\\attendancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|solutionrelative:controllers\\attendancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|d:\\projects\\byteflow\\byteflow-server\\services\\attendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|solutionrelative:services\\attendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|d:\\projects\\byteflow\\byteflow-server\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|d:\\projects\\byteflow\\byteflow-server\\services\\iattendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|solutionrelative:services\\iattendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|d:\\projects\\byteflow\\byteflow-server\\services\\attendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|solutionrelative:services\\attendanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|d:\\projects\\byteflow\\byteflow-server\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -39,16 +59,8 @@
       "RelativeMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|solutionrelative:services\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|d:\\projects\\byteflow\\byteflow-server\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|solutionrelative:controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|d:\\projects\\byteflow\\byteflow-server\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|d:\\projects\\byteflow\\byteflow-server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|d:\\projects\\byteflow\\byteflow-server\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -57,14 +69,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|d:\\projects\\byteflow\\byteflow-server\\repositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|solutionrelative:repositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|d:\\projects\\byteflow\\byteflow-server\\byteflow-server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|solutionrelative:byteflow-server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|d:\\projects\\byteflow\\byteflow-server\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|d:\\projects\\byteflow\\byteflow-server\\dataaccess\\byteflowdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -91,10 +95,6 @@
       "RelativeMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|solutionrelative:models\\attendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|d:\\projects\\byteflow\\byteflow-server\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|solutionrelative:models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|d:\\projects\\byteflow\\byteflow-server\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{09E78935-8BAE-49CE-8EFD-26DDA98E2137}|byteflow-server.csproj|solutionrelative:models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -110,227 +110,46 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "AuthController.cs",
               "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
               "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\Controllers\\AuthController.cs",
               "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwEIAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAiwC4AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-04T05:05:42.248Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": ".gitignore",
-              "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\.gitignore",
-              "RelativeDocumentMoniker": ".gitignore",
-              "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\.gitignore",
-              "RelativeToolTip": ".gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-05-04T13:17:36.649Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AttendanceController.cs",
-              "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\Controllers\\AttendanceController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AttendanceController.cs",
-              "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\Controllers\\AttendanceController.cs",
-              "RelativeToolTip": "Controllers\\AttendanceController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T12:34:24.134Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AttendanceService.cs",
-              "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\Services\\AttendanceService.cs",
-              "RelativeDocumentMoniker": "Services\\AttendanceService.cs",
-              "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\Services\\AttendanceService.cs",
-              "RelativeToolTip": "Services\\AttendanceService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T12:33:20.218Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IAttendanceService.cs",
-              "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\Services\\IAttendanceService.cs",
-              "RelativeDocumentMoniker": "Services\\IAttendanceService.cs",
-              "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\Services\\IAttendanceService.cs",
-              "RelativeToolTip": "Services\\IAttendanceService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T12:32:44.884Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "EmployeeController.cs",
-              "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\Controllers\\EmployeeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\EmployeeController.cs",
-              "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\Controllers\\EmployeeController.cs",
-              "RelativeToolTip": "Controllers\\EmployeeController.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAA5wEgAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T12:23:14.333Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EmployeeService.cs",
-              "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\Services\\EmployeeService.cs",
-              "RelativeDocumentMoniker": "Services\\EmployeeService.cs",
-              "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\Services\\EmployeeService.cs",
-              "RelativeToolTip": "Services\\EmployeeService.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwCQAAABfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T12:13:14.938Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IEmployeeService.cs",
-              "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\Services\\IEmployeeService.cs",
-              "RelativeDocumentMoniker": "Services\\IEmployeeService.cs",
-              "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\Services\\IEmployeeService.cs",
-              "RelativeToolTip": "Services\\IEmployeeService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T12:12:48.675Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "Services\\UserService.cs",
-              "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\Services\\UserService.cs",
-              "RelativeToolTip": "Services\\UserService.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAgwCgAAABJAAAAAAAAAA==",
+              "Title": "Employee.cs",
+              "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "Models\\Employee.cs",
+              "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\Models\\Employee.cs",
+              "RelativeToolTip": "Models\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T10:24:55.28Z",
+              "WhenOpened": "2025-04-29T11:58:57.688Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "GenericRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\Repositories\\GenericRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\GenericRepository.cs",
-              "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\Repositories\\GenericRepository.cs",
-              "RelativeToolTip": "Repositories\\GenericRepository.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACEAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T10:22:55.755Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "IGenericRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\Repositories\\IGenericRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\IGenericRepository.cs",
-              "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\Repositories\\IGenericRepository.cs",
-              "RelativeToolTip": "Repositories\\IGenericRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T10:22:40.011Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
-              "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T06:42:01.111Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\Services\\IUserService.cs",
-              "RelativeDocumentMoniker": "Services\\IUserService.cs",
-              "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\Services\\IUserService.cs",
-              "RelativeToolTip": "Services\\IUserService.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAkwAkAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T10:24:32.185Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T05:13:33.311Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ByteFlowDbContext.cs",
-              "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\DataAccess\\ByteFlowDbContext.cs",
-              "RelativeDocumentMoniker": "DataAccess\\ByteFlowDbContext.cs",
-              "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\DataAccess\\ByteFlowDbContext.cs",
-              "RelativeToolTip": "DataAccess\\ByteFlowDbContext.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAUwBMAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T09:35:27.545Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Attendance.cs",
-              "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\Models\\Attendance.cs",
-              "RelativeDocumentMoniker": "Models\\Attendance.cs",
-              "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\Models\\Attendance.cs",
-              "RelativeToolTip": "Models\\Attendance.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T05:46:17.369Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 1,
               "Title": "byteflow-server.csproj",
               "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\byteflow-server.csproj",
               "RelativeDocumentMoniker": "byteflow-server.csproj",
@@ -343,7 +162,215 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 5,
+              "Title": "IAttendanceService.cs",
+              "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\Services\\IAttendanceService.cs",
+              "RelativeDocumentMoniker": "Services\\IAttendanceService.cs",
+              "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\Services\\IAttendanceService.cs",
+              "RelativeToolTip": "Services\\IAttendanceService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T12:32:44.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-04T06:52:03.571Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EmployeeController.cs",
+              "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "Controllers\\EmployeeController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T12:23:14.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACgAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T05:13:33.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EmployeeService.cs",
+              "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\Services\\EmployeeService.cs",
+              "RelativeDocumentMoniker": "Services\\EmployeeService.cs",
+              "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\Services\\EmployeeService.cs",
+              "RelativeToolTip": "Services\\EmployeeService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwCQAAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T12:13:14.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AttendanceService.cs",
+              "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\Services\\AttendanceService.cs",
+              "RelativeDocumentMoniker": "Services\\AttendanceService.cs",
+              "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\Services\\AttendanceService.cs",
+              "RelativeToolTip": "Services\\AttendanceService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T12:33:20.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AttendanceController.cs",
+              "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\Controllers\\AttendanceController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AttendanceController.cs",
+              "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\Controllers\\AttendanceController.cs",
+              "RelativeToolTip": "Controllers\\AttendanceController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T12:34:24.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": ".gitignore",
+              "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-04T13:17:36.649Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IEmployeeService.cs",
+              "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\Services\\IEmployeeService.cs",
+              "RelativeDocumentMoniker": "Services\\IEmployeeService.cs",
+              "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\Services\\IEmployeeService.cs",
+              "RelativeToolTip": "Services\\IEmployeeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T12:12:48.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Services\\UserService.cs",
+              "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\Services\\UserService.cs",
+              "RelativeToolTip": "Services\\UserService.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAgwCgAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T10:24:55.28Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\Repositories\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\GenericRepository.cs",
+              "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\Repositories\\GenericRepository.cs",
+              "RelativeToolTip": "Repositories\\GenericRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwCEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T10:22:55.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\Repositories\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\IGenericRepository.cs",
+              "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\Repositories\\IGenericRepository.cs",
+              "RelativeToolTip": "Repositories\\IGenericRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T10:22:40.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T06:42:01.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\Services\\IUserService.cs",
+              "RelativeDocumentMoniker": "Services\\IUserService.cs",
+              "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\Services\\IUserService.cs",
+              "RelativeToolTip": "Services\\IUserService.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAkwAkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T10:24:32.185Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ByteFlowDbContext.cs",
+              "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\DataAccess\\ByteFlowDbContext.cs",
+              "RelativeDocumentMoniker": "DataAccess\\ByteFlowDbContext.cs",
+              "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\DataAccess\\ByteFlowDbContext.cs",
+              "RelativeToolTip": "DataAccess\\ByteFlowDbContext.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAA0wBMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T09:35:27.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Attendance.cs",
+              "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\Models\\Attendance.cs",
+              "RelativeDocumentMoniker": "Models\\Attendance.cs",
+              "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\Models\\Attendance.cs",
+              "RelativeToolTip": "Models\\Attendance.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T05:46:17.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "byteflow-server.http",
               "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\byteflow-server.http",
               "RelativeDocumentMoniker": "byteflow-server.http",
@@ -351,11 +378,12 @@
               "RelativeToolTip": "byteflow-server.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-05-04T05:17:58.05Z"
+              "WhenOpened": "2025-05-04T05:17:58.05Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -363,36 +391,25 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-30T09:38:42.105Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
-              "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-04T06:52:03.571Z",
+              "WhenOpened": "2025-04-30T09:38:42.105Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "LeaveRequest.cs",
               "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\Models\\LeaveRequest.cs",
               "RelativeDocumentMoniker": "Models\\LeaveRequest.cs",
               "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\Models\\LeaveRequest.cs",
               "RelativeToolTip": "Models\\LeaveRequest.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAwwBsAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAA/wBsAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T08:59:09.229Z"
+              "WhenOpened": "2025-04-30T08:59:09.229Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
@@ -400,7 +417,8 @@
               "RelativeToolTip": "Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T10:36:03.082Z"
+              "WhenOpened": "2025-04-29T10:36:03.082Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -412,7 +430,8 @@
               "RelativeToolTip": "Models\\Role.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T09:15:26.621Z"
+              "WhenOpened": "2025-04-30T09:15:26.621Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -424,19 +443,7 @@
               "RelativeToolTip": "Models\\Department.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T05:40:54.162Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Employee.cs",
-              "DocumentMoniker": "D:\\Projects\\ByteFlow\\byteflow-server\\Models\\Employee.cs",
-              "RelativeDocumentMoniker": "Models\\Employee.cs",
-              "ToolTip": "D:\\Projects\\ByteFlow\\byteflow-server\\Models\\Employee.cs",
-              "RelativeToolTip": "Models\\Employee.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAA6wCMAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T11:58:57.688Z",
+              "WhenOpened": "2025-04-30T05:40:54.162Z",
               "EditorCaption": ""
             }
           ]

@@ -34,7 +34,11 @@ namespace byteflow_server.Controllers
                 {
                     return Unauthorized();
                 }
-                if (user.UserName == details.UserName && user.Password == details.Password)
+                if ((user.UserName == details.UserName && user.Password == details.Password) )
+                {
+                    var token = GenerateToken(user);
+                    return Ok(new { token });
+                }else if (user.Email == details.Email && user.Password == details.Password) 
                 {
                     var token = GenerateToken(user);
                     return Ok(new { token });
