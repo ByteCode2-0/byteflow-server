@@ -64,14 +64,15 @@ namespace byteflow_server.Controllers
 
             var claims = new[]
             {
-                new Claim(JwtRegisteredClaimNames.Sub, user.UserName ?? string.Empty),
-                new Claim(JwtRegisteredClaimNames.Jti, user.UserId.ToString()),
-                new Claim(ClaimTypes.Role, user.Role ?? string.Empty)
+                new Claim("username", user.UserName ?? string.Empty),
+                new Claim("email", user.Email ?? string.Empty),
+                new Claim("role", user.Role ?? string.Empty),
+                new Claim("userId", user.UserId.ToString())
             };
 
             var token = new JwtSecurityToken(
-                issuer: "*",
-                audience: "*",
+                issuer: "ByteFlow",
+                audience: "ByteFlow",
                 claims: claims,
                 expires: DateTime.Now.AddDays(1),
                 signingCredentials: credential
