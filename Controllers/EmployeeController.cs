@@ -1,4 +1,5 @@
 ﻿using byteflow_server.Models;
+using byteflow_server.Models.DTOs;
 using byteflow_server.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -38,15 +39,21 @@ namespace byteflow_server.Controllers
 
         [Authorize(Roles = "Admin")]
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] Employee newEmployee)
+        public async Task<IActionResult> Create([FromBody] EmployeeCreateDto createDto)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            await _employeeService.CreateEmployeeAsync(newEmployee);
-            return CreatedAtAction(nameof(GetById), new { id = newEmployee.EmployeeId }, newEmployee);
+            var result = await _employeeService.CreateEmployeeWithUserAsync(createDto);
+            
+            if (!result.Success)
+            {
+                return BadRequest(result.Message);
+            }
+
+            return CreatedAtAction(nameof(GetById), new { id = result.Employee.EmployeeId }, result.Employee);
         }
 
         [Authorize(Roles = "Admin,Manager,Employee")]
@@ -64,7 +71,7 @@ namespace byteflow_server.Controllers
                 return NotFound("Employee not found.");
             }
 
-            updatedEmployee.EmployeeId = id; 
+            updatedEmployee.EmployeeId = id;
             await _employeeService.UpdateEmployeeAsync(updatedEmployee);
             return NoContent();
         }

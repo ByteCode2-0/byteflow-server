@@ -113,8 +113,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "newEmployee",
-        "Type": "byteflow_server.Models.Employee",
+        "Name": "createDto",
+        "Type": "byteflow_server.Models.DTOs.EmployeeCreateDto",
         "IsRequired": true
       }
     ],

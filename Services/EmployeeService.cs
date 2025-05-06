@@ -1,5 +1,6 @@
 ﻿using byteflow_server.DataAccess;
 using byteflow_server.Models;
+using byteflow_server.Models.DTOs;
 using byteflow_server.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
@@ -9,10 +10,16 @@ namespace byteflow_server.Services
     public class EmployeeService : IEmployeeService
     {
         private readonly IGenericRepository<Employee> _employeeRepository;
+        private readonly IGenericRepository<User> _userRepository;
         private readonly ByteFlowDbContext _context;
-        public EmployeeService(IGenericRepository<Employee> employeeRepository, ByteFlowDbContext context)
+
+        public EmployeeService(
+            IGenericRepository<Employee> employeeRepository,
+            IGenericRepository<User> userRepository,
+            ByteFlowDbContext context)
         {
             _employeeRepository = employeeRepository;
+            _userRepository = userRepository;
             _context = context;
         }
 
@@ -26,10 +33,54 @@ namespace byteflow_server.Services
             return await _employeeRepository.GetByIdAsync(id);
         }
 
-        public async Task CreateEmployeeAsync(Employee employee)
+        public async Task<(bool Success, string Message, Employee? Employee)> CreateEmployeeWithUserAsync(EmployeeCreateDto createDto)
         {
-            await _employeeRepository.AddAsync(employee);
-            await _employeeRepository.SaveChangesAsync();
+            using var transaction = await _context.Database.BeginTransactionAsync();
+            try
+            {
+                // Check if username or email already exists
+                if (await _context.Users.AnyAsync(u => u.UserName == createDto.UserName || u.Email == createDto.Email))
+                {
+                    return (false, "Username or email already exists", null);
+                }
+
+                // Create User
+                var user = new User
+                {
+                    UserName = createDto.UserName,
+                    Email = createDto.Email,
+                    Password = createDto.Password,
+                    Role = "Employee", // Default role for new employees
+                    IsActive = true
+                };
+
+                await _userRepository.AddAsync(user);
+                await _userRepository.SaveChangesAsync();
+
+                // Create Employee
+                var employee = new Employee
+                {
+                    UserId = user.UserId,
+                    EmployeeName = createDto.EmployeeName,
+                    PhoneNumber = createDto.PhoneNumber,
+                    DepartmentId = createDto.DepartmentId,
+                    Address = createDto.Address,
+                    DateOfBirth = createDto.DateOfBirth,
+                    PhotoUrl = createDto.PhotoUrl,
+                    JoinDate = DateTime.UtcNow
+                };
+
+                await _employeeRepository.AddAsync(employee);
+                await _employeeRepository.SaveChangesAsync();
+
+                await transaction.CommitAsync();
+                return (true, "Employee created successfully", employee);
+            }
+            catch (Exception ex)
+            {
+                await transaction.RollbackAsync();
+                return (false, $"Error creating employee: {ex.Message}", null);
+            }
         }
 
         public async Task UpdateEmployeeAsync(Employee employee)
@@ -41,7 +92,6 @@ namespace byteflow_server.Services
                 _employeeRepository.Update(employee);
                 await _employeeRepository.SaveChangesAsync();
             }
-           
         }
 
         public async Task DeleteEmployeeAsync(long id)

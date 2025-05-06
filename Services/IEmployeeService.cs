@@ -1,4 +1,5 @@
 ﻿using byteflow_server.Models;
+using byteflow_server.Models.DTOs;
 
 namespace byteflow_server.Services
 {
@@ -6,7 +7,7 @@ namespace byteflow_server.Services
     {
         Task<IEnumerable<Employee>> GetAllEmployeesAsync();
         Task<Employee?> GetEmployeeByIdAsync(long id);
-        Task CreateEmployeeAsync(Employee employee);
+        Task<(bool Success, string Message, Employee? Employee)> CreateEmployeeWithUserAsync(EmployeeCreateDto createDto);
         Task UpdateEmployeeAsync(Employee employee);
         Task DeleteEmployeeAsync(long id);
     }
