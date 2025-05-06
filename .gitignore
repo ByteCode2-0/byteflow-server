@@ -1,7 +1,8 @@
 # Build Folders
-bin/
+.vs/
 obj/
-.vs
+bin/
+
 # User-Specific Files
 *.user
 *.suo
