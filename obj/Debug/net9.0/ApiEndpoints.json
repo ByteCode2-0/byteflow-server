@@ -87,8 +87,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "details",
-        "Type": "byteflow_server.Models.User",
+        "Name": "loginRequest",
+        "Type": "byteflow_server.Models.DTOs.LoginRequestDto",
         "IsRequired": true
       }
     ],

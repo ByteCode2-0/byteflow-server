@@ -1,15 +1,16 @@
 ﻿using byteflow_server.Models;
+using byteflow_server.Models.DTOs;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using byteflow_server.DataAccess;
+using Microsoft.EntityFrameworkCore;
 
 namespace byteflow_server.Controllers
 {
-
-        [Route("api/[controller]")]
+    [Route("api/[controller]")]
     public class AuthController : ControllerBase
     {
         private readonly ByteFlowDbContext db;
@@ -21,36 +22,39 @@ namespace byteflow_server.Controllers
 
         [HttpPost]
         [Route("login")]
-        public IActionResult Login([FromBody] User details)
+        public async Task<IActionResult> Login([FromBody] LoginRequestDto loginRequest)
         {
             try
             {
-                if (details == null)
+                if (loginRequest == null)
                 {
-                    return BadRequest();
+                    return BadRequest("Login details are required");
                 }
-                var user = db.Users.FirstOrDefault(user => user.UserName == details.UserName);
+
+                // Check if the input is an email
+                bool isEmail = loginRequest.UserNameOrEmail.Contains("@");
+
+                // Query based on either username or email
+                var user = await db.Users.FirstOrDefaultAsync(u => 
+                    (isEmail ? u.Email == loginRequest.UserNameOrEmail : u.UserName == loginRequest.UserNameOrEmail));
+
                 if (user == null)
                 {
-                    return Unauthorized();
+                    return Unauthorized("Invalid credentials");
                 }
-                if (user.UserName == details.UserName && user.Password == details.Password )
+
+                if (user.Password == loginRequest.Password)
                 {
                     var token = GenerateToken(user);
                     return Ok(new { token });
                 }
-                else if (user.Email == details.Email && user.Password == details.Password)
-                {
-                    var token = GenerateToken(user);
-                    return Ok(new { token });
-                }
+
+                return Unauthorized("Invalid credentials");
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.ToString());
-                return BadRequest();
+                return BadRequest($"An error occurred: {ex.Message}");
             }
-            return BadRequest();
         }
 
         private string GenerateToken(User user)
@@ -58,9 +62,9 @@ namespace byteflow_server.Controllers
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("Rabiul-Islam-Rabi-ByteFlow-System"));
             var credential = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
-            var claim = new[]
+            var claims = new[]
             {
-                new Claim(JwtRegisteredClaimNames.Sub, user.UserName ?? string.Empty), 
+                new Claim(JwtRegisteredClaimNames.Sub, user.UserName ?? string.Empty),
                 new Claim(JwtRegisteredClaimNames.Jti, user.UserId.ToString()),
                 new Claim(ClaimTypes.Role, user.Role ?? string.Empty)
             };
@@ -68,7 +72,7 @@ namespace byteflow_server.Controllers
             var token = new JwtSecurityToken(
                 issuer: "*",
                 audience: "*",
-                claims: claim,
+                claims: claims,
                 expires: DateTime.Now.AddDays(1),
                 signingCredentials: credential
             );

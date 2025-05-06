@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\ByteFlow\\byteflow-server\\byteflow-server.csproj": {}
+    "E:\\ByteFlow\\byteflow-server\\byteflow-server.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\ByteFlow\\byteflow-server\\byteflow-server.csproj": {
+    "E:\\ByteFlow\\byteflow-server\\byteflow-server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\ByteFlow\\byteflow-server\\byteflow-server.csproj",
+        "projectUniqueName": "E:\\ByteFlow\\byteflow-server\\byteflow-server.csproj",
         "projectName": "byteflow-server",
-        "projectPath": "D:\\Projects\\ByteFlow\\byteflow-server\\byteflow-server.csproj",
-        "packagesPath": "C:\\Users\\Rabiul\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\ByteFlow\\byteflow-server\\obj\\",
+        "projectPath": "E:\\ByteFlow\\byteflow-server\\byteflow-server.csproj",
+        "packagesPath": "C:\\Users\\alimu\\.nuget\\packages\\",
+        "outputPath": "E:\\ByteFlow\\byteflow-server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Rabiul\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\alimu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -102,7 +102,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
