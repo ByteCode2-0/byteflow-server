@@ -28,12 +28,14 @@ namespace byteflow_server.Services
 
         public async Task CreateLeaveRequestAsync(LeaveRequest leaveRequest)
         {
+            leaveRequest.AppliedDate = DateTime.Today;
             await _leaveRepository.AddAsync(leaveRequest);
             await _leaveRepository.SaveChangesAsync();
         }
 
         public async Task UpdateLeaveRequestAsync(LeaveRequest leaveRequest)
         {
+            leaveRequest.UpdatedAt = DateTime.UtcNow;
             var existingLeaveRequest = await _leaveRepository.GetByIdAsync(leaveRequest.LeaveRequestId);
             if (existingLeaveRequest != null)
             {

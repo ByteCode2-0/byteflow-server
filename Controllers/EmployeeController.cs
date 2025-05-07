@@ -47,7 +47,7 @@ namespace byteflow_server.Controllers
         public async Task<IActionResult> GetById(long id)
         {
             var employee = await _employeeService.GetEmployeeByIdAsync(id);
-            if (employee is null) // Use 'is null' for nullable types
+            if (employee is null) 
             {
                 return NotFound("Employee not found.");
             }

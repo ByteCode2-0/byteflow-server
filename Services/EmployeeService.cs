@@ -85,6 +85,7 @@ namespace byteflow_server.Services
 
         public async Task UpdateEmployeeAsync(Employee employee)
         {
+            employee.UpdatedAt = DateTime.UtcNow;
             var existingEmployee = await _employeeRepository.GetByIdAsync(employee.EmployeeId);
             if (existingEmployee != null)
             {
