@@ -2,6 +2,7 @@
 using byteflow_server.Models.DTOs;
 using byteflow_server.Services;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace byteflow_server.Controllers
@@ -17,6 +18,22 @@ namespace byteflow_server.Controllers
             _employeeService = employeeService;
         }
 
+        [Authorize(Roles = "Admin,Manager,Hr,Employee")]
+        [HttpGet("user/{userId}")]
+        public async Task<IActionResult> GetEmployeeByUserId(long userId)
+        {
+            var employees = await _employeeService.GetAllEmployeesAsync();
+            var employee = employees.FirstOrDefault(e => e.UserId == userId);
+            if (employee == null)
+            {
+                return NotFound();
+            }
+            return Ok(employee); 
+        }
+
+
+
+
         //[Authorize(Roles = "Admin,Manager")]
         [HttpGet]
         public async Task<IActionResult> GetAll()
@@ -30,7 +47,7 @@ namespace byteflow_server.Controllers
         public async Task<IActionResult> GetById(long id)
         {
             var employee = await _employeeService.GetEmployeeByIdAsync(id);
-            if (employee == null)
+            if (employee is null) 
             {
                 return NotFound("Employee not found.");
             }
@@ -89,5 +106,6 @@ namespace byteflow_server.Controllers
             await _employeeService.DeleteEmployeeAsync(id);
             return NoContent(); 
         }
+       
     }
 }

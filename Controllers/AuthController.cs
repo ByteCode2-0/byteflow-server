@@ -32,7 +32,7 @@ namespace byteflow_server.Controllers
                 }
 
                 // Check if the input is an email
-                bool isEmail = loginRequest.UserNameOrEmail.Contains("@");
+                bool isEmail = loginRequest.UserNameOrEmail.Contains('@');
 
                 // Query based on either username or email
                 var user = await db.Users.FirstOrDefaultAsync(u => 
