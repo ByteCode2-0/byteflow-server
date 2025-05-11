@@ -4,6 +4,13 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace byteflow_server.Models
 {
+    public enum LeaveStatus
+    {
+        Pending = 0,
+        Approved = 1,
+        Rejected = 2
+    }
+
     public class LeaveRequest
     {
         [Key]
@@ -30,6 +37,6 @@ namespace byteflow_server.Models
         public DateTime? CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime? UpdatedAt { get; set; } = DateTime.UtcNow;
         public bool? IsDeleted { get; set; } = false;
-        public bool? Status { get; set; } = true;
+        public LeaveStatus Status { get; set; } = LeaveStatus.Pending;
     }
 }

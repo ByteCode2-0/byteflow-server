@@ -181,8 +181,8 @@ namespace byteflow_server.Migrations
                     b.Property<DateTime?>("StartDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<bool?>("Status")
-                        .HasColumnType("bit");
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
