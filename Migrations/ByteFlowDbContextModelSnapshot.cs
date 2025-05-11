@@ -39,26 +39,22 @@ namespace byteflow_server.Migrations
                     b.Property<DateTime?>("CheckOutTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime?>("CreatedAt")
+                    b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<bool?>("IsDeleted")
+                    b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
                     b.Property<long?>("ReviewedBy")
                         .HasColumnType("bigint");
 
-                    b.Property<bool?>("Status")
-                        .HasColumnType("bit");
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
 
-                    b.Property<DateTime?>("UpdatedAt")
+                    b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
 
                     b.HasKey("AttendanceId");
-
-                    b.HasIndex("AttendeeId");
-
-                    b.HasIndex("ReviewedBy");
 
                     b.ToTable("Attendances");
                 });
@@ -266,23 +262,6 @@ namespace byteflow_server.Migrations
                     b.HasKey("UserId");
 
                     b.ToTable("Users");
-                });
-
-            modelBuilder.Entity("byteflow_server.Models.Attendance", b =>
-                {
-                    b.HasOne("byteflow_server.Models.Employee", "Attendee")
-                        .WithMany()
-                        .HasForeignKey("AttendeeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("byteflow_server.Models.Employee", "Reviewer")
-                        .WithMany()
-                        .HasForeignKey("ReviewedBy");
-
-                    b.Navigation("Attendee");
-
-                    b.Navigation("Reviewer");
                 });
 
             modelBuilder.Entity("byteflow_server.Models.Employee", b =>

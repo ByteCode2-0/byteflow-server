@@ -1,29 +1,37 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace byteflow_server.Models
 {
+    [JsonConverter(typeof(JsonStringEnumConverter))]
+    public enum AttendanceStatus
+    {
+        Pending,
+        Present,
+        Absent,
+        Late
+    }
+
     public class Attendance
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long AttendanceId { get; set; }
 
+        [Required]
         public long AttendeeId { get; set; }
-
-        [ForeignKey("AttendeeId")]
-        public Employee? Attendee { get; set; }
 
         public long? ReviewedBy { get; set; }
 
-        [ForeignKey("ReviewedBy")]
-        public Employee? Reviewer { get; set; }
-
-        public DateTime? CheckInTime { get; set; } = DateTime.UtcNow;
+        public DateTime? CheckInTime { get; set; }
         public DateTime? CheckOutTime { get; set; }
-        public DateTime? CreatedAt { get; set; } = DateTime.UtcNow;
-        public DateTime? UpdatedAt { get; set; } = DateTime.UtcNow;
-        public bool? IsDeleted { get; set; } = false;
-        public bool? Status { get; set; } = true;
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+        public bool IsDeleted { get; set; } = false;
+        
+        [Required]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
+        public AttendanceStatus Status { get; set; } = AttendanceStatus.Pending;
     }
 }
