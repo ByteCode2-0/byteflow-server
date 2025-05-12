@@ -42,25 +42,26 @@ namespace byteflow_server.Services
                     return (false, "CheckInTime is required", null);
                 }
 
-                // Check if attendance already exists for this employee on this check-in time
+                // Check if attendance already exists for this employee on this date
                 var existingAttendance = await _context.Attendances
-                    .FirstOrDefaultAsync(a => a.AttendeeId == attendance.AttendeeId && 
-                                            a.CheckInTime.HasValue &&
-                                            a.CheckInTime.Value.Date == attendance.CheckInTime.Value.Date && 
-                                            !a.IsDeleted);
+                    .FirstOrDefaultAsync(a => 
+                        a.AttendeeId == attendance.AttendeeId && 
+                        a.CheckInTime.HasValue &&
+                        a.CheckInTime.Value.Date == attendance.CheckInTime.Value.Date && 
+                        !a.IsDeleted);
 
                 if (existingAttendance != null)
                 {
-                    return (false, "Attendance record already exists for this employee on this date", null);
+                    return (false, $"Attendance record already exists for employee {attendance.AttendeeId} on {attendance.CheckInTime.Value.Date:yyyy-MM-dd}", null);
                 }
 
                 // Set default values
                 attendance.CreatedAt = DateTime.UtcNow;
                 attendance.UpdatedAt = DateTime.UtcNow;
                 attendance.IsDeleted = false;
-                attendance.Status = AttendanceStatus.Pending; // Ensure status is Pending for new records
-                attendance.ReviewedBy = null; // Ensure ReviewedBy is null for new records
-                attendance.CheckOutTime = null; // Ensure CheckOutTime is null for new records
+                attendance.Status = AttendanceStatus.Pending;
+                attendance.ReviewedBy = null;
+                attendance.CheckOutTime = null;
 
                 await _attendanceRepository.AddAsync(attendance);
                 await _attendanceRepository.SaveChangesAsync();
@@ -83,13 +84,17 @@ namespace byteflow_server.Services
                     return (false, "Attendance record not found");
                 }
 
-                if (attendance.Status != AttendanceStatus.Pending)
-                {
-                    return (false, "This attendance record has already been reviewed");
-                }
-
-                attendance.ReviewedBy = reviewDto.ReviewerId;
+                // Update the attendance record with review information
+                attendance.ReviewedBy = reviewDto.ReviewedBy;
                 attendance.Status = reviewDto.Status;
+                attendance.CheckInTime = reviewDto.CheckInTime;
+                
+                // Only update CheckOutTime if it's provided
+                if (reviewDto.CheckOutTime.HasValue)
+                {
+                    attendance.CheckOutTime = reviewDto.CheckOutTime;
+                }
+                
                 attendance.UpdatedAt = DateTime.UtcNow;
 
                 _attendanceRepository.Update(attendance);

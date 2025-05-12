@@ -19,6 +19,7 @@ namespace byteflow_server.Controllers
             _attendanceService = attendanceService;
         }
 
+        //get all attendance
         [Authorize(Roles = "Admin,Manager,Employee")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Attendance>>> GetAll()
@@ -27,6 +28,7 @@ namespace byteflow_server.Controllers
             return Ok(attendances);
         }
 
+        //get all attendance    
         [Authorize(Roles = "Admin,Manager,Employee")]
         [HttpGet("{id}")]
         public async Task<ActionResult<Attendance>> GetById(long id)
@@ -39,6 +41,7 @@ namespace byteflow_server.Controllers
             return Ok(attendance);
         }
 
+        //create attendance
         [Authorize(Roles = "Admin,Manager,Employee")]
         [HttpPost]
         public async Task<ActionResult<Attendance>> Create(Attendance attendance)
@@ -57,9 +60,10 @@ namespace byteflow_server.Controllers
             return CreatedAtAction(nameof(GetById), new { id = result.Attendance?.AttendanceId }, result.Attendance);
         }
 
-        [Authorize(Roles = "Admin,Manager")]
-        [HttpPost("{id}/review")]
-        public async Task<ActionResult> Review(long id, AttendanceReviewDto reviewDto)
+        //review attendance
+        [Authorize(Roles = "Admin,Manager,HR")]
+        [HttpPatch("{id}/review")]
+        public async Task<ActionResult> Review(long id, [FromBody] AttendanceReviewDto reviewDto)
         {
             if (!ModelState.IsValid)
             {
@@ -75,53 +79,26 @@ namespace byteflow_server.Controllers
             return Ok(new { message = result.Message });
         }
 
+        //update attendance
         [Authorize]
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Update(long id, [FromBody] object body)
+        [HttpPatch("{id}")]
+        public async Task<IActionResult> Update(long id, [FromBody] AttendanceCheckoutUpdateDto checkoutDto)
         {
-            var userRole = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value ?? "";
-            var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == "userId")?.Value
-                   ?? User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value
-                   ?? User.Claims.FirstOrDefault(c => c.Type == "sub")?.Value
-                   ?? "";
-            long.TryParse(userIdClaim, out var userId);
-
             var existingAttendance = await _attendanceService.GetAttendanceByIdAsync(id);
             if (existingAttendance == null)
                 return NotFound();
 
-            if (userRole == "Employee")
-            {
-                // Only allow updating CheckOutTime for their own record
-                if (existingAttendance.AttendeeId != userId)
-                    return Forbid();
+            if (checkoutDto.CheckOutTime == default)
+                return BadRequest("checkOutTime is required and must be a valid date.");
 
-                // Deserialize to DTO
-                var checkoutDto = Newtonsoft.Json.JsonConvert.DeserializeObject<AttendanceCheckoutUpdateDto>(body.ToString());
-                if (checkoutDto == null || checkoutDto.CheckOutTime == default)
-                    return BadRequest("checkOutTime is required and must be a valid date.");
+            // Only update the checkout time, preserve all other data
+            existingAttendance.CheckOutTime = checkoutDto.CheckOutTime;
+            existingAttendance.UpdatedAt = DateTime.UtcNow;
 
-                existingAttendance.CheckOutTime = checkoutDto.CheckOutTime;
-                await _attendanceService.UpdateAttendanceAsync(existingAttendance);
-                return NoContent();
-            }
-            else if (userRole == "Admin" || userRole == "Manager" || userRole == "HR")
-            {
-                // Allow full update
-                var updatedAttendance = Newtonsoft.Json.JsonConvert.DeserializeObject<Attendance>(body.ToString());
-                if (updatedAttendance == null)
-                    return BadRequest("Invalid attendance data.");
-
-                updatedAttendance.AttendanceId = id;
-                await _attendanceService.UpdateAttendanceAsync(updatedAttendance);
-                return NoContent();
-            }
-            else
-            {
-                return Forbid();
-            }
+            await _attendanceService.UpdateAttendanceAsync(existingAttendance);
+            return NoContent();
         }
-
+        //delete attendance
         [Authorize(Roles = "Admin,Manager")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(long id)
@@ -136,6 +113,7 @@ namespace byteflow_server.Controllers
             return NoContent();
         }
 
+        //get attendance by attendee id
         [Authorize(Roles = "Admin,Manager,Employee")]
         [HttpGet("user/{attendeeId}")]
         public async Task<ActionResult<IEnumerable<Attendance>>> GetByAttendeeId(long attendeeId)
