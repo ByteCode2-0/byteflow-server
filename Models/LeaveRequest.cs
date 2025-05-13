@@ -30,6 +30,7 @@ namespace byteflow_server.Models
         public User? Reviewer { get; set; }
 
         public string? LeaveType { get; set; }
+        public string? FeedBack { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public string? Reason { get; set; }
@@ -38,5 +39,6 @@ namespace byteflow_server.Models
         public DateTime? UpdatedAt { get; set; } = DateTime.UtcNow;
         public bool? IsDeleted { get; set; } = false;
         public LeaveStatus Status { get; set; } = LeaveStatus.Pending;
+       
     }
 }

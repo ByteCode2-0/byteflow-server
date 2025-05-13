@@ -1,5 +1,7 @@
 ﻿using byteflow_server.Models;
 using byteflow_server.Services;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 
 namespace byteflow_server.Controllers
@@ -62,6 +64,40 @@ namespace byteflow_server.Controllers
         {
             await _leaveService.DeleteLeaveRequestAsync(id);
             return NoContent();
+        }
+       
+        [HttpPatch("{id}")]
+        public async Task<IActionResult> PatchLeaveRequest(long id, [FromBody] JsonPatchDocument<LeaveRequest> patchDoc)
+        {
+            if (patchDoc == null)
+            {
+                return BadRequest("Invalid patch document");
+            }
+
+            // Retrieve the leave request from the service
+            var leaveRequest = await _leaveService.GetLeaveRequestByIdAsync(id);
+            if (leaveRequest == null)
+            {
+                return NotFound("Leave request not found");
+            }
+
+            // Apply the patch to the leave request
+            patchDoc.ApplyTo(leaveRequest, (error) =>
+            {
+                ModelState.AddModelError(error.AffectedObject.ToString(), error.ErrorMessage);
+            });
+
+            // Validate the patched object
+            if (!TryValidateModel(leaveRequest))
+            {
+                return BadRequest(ModelState);
+            }
+
+            // Update the leave request in the database
+            await _leaveService.UpdateLeaveRequestAsync(leaveRequest);
+
+            //return NoContent();
+            return Ok(leaveRequest);
         }
     }
 }
