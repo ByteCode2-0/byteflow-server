@@ -9,5 +9,9 @@ namespace byteflow_server.Services
         Task CreateLeaveRequestAsync(LeaveRequest leaveRequest);
         Task UpdateLeaveRequestAsync(LeaveRequest leaveRequest);
         Task DeleteLeaveRequestAsync(long id);
+
+        Task<IEnumerable<LeaveRequest>> GetAllLeaveRequestsReviewByAsync(long id);
+
+        Task<IEnumerable<LeaveRequest>> GetLeaveRequestsByEmployeeIdAsync(long id);
     }
 }

@@ -99,5 +99,28 @@ namespace byteflow_server.Controllers
             //return NoContent();
             return Ok(leaveRequest);
         }
+
+        [HttpGet("/reviewer/{id}")]
+        public async Task<IActionResult> GetAllLeaveRequestsReview(long id)
+        {
+            var reviews = await _leaveService.GetAllLeaveRequestsReviewByAsync(id);
+            if (reviews == null)
+            {
+                return NotFound("Reviews not found for the given leave request ID");
+            }
+            return Ok(reviews);
+        }
+
+
+        [HttpGet("/employee/{id}")]
+        public async Task<IActionResult> GetLeaveRequestsByEmployeeId(long id)
+        {
+            var employee = await _leaveService.GetLeaveRequestsByEmployeeIdAsync(id);
+            if(employee == null)
+            {
+                return NotFound("Employee not found for the leave request id");
+            }
+            return Ok(employee);
+        }
     }
 }
