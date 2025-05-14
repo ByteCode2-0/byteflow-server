@@ -28,7 +28,7 @@ namespace byteflow_server.Controllers
             return Ok(attendances);
         }
 
-        //get all attendance    
+        //get all attendance By user ID  
         [Authorize(Roles = "Admin,Manager,Employee")]
         [HttpGet("{id}")]
         public async Task<ActionResult<Attendance>> GetById(long id)

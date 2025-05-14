@@ -25,7 +25,10 @@ namespace byteflow_server.Services
 
         public async Task<IEnumerable<Employee>> GetAllEmployeesAsync()
         {
-            return await _employeeRepository.GetAllAsync();
+            return await _context.Employees
+                .Include(e => e.Department)
+                .Include(e => e.User)
+                .ToListAsync();
         }
 
         public async Task<Employee?> GetEmployeeByIdAsync(long id)

@@ -74,7 +74,7 @@ namespace byteflow_server.Controllers
         }
 
         [Authorize(Roles = "Admin,Manager,Employee")]
-        [HttpPut("{id}")]
+        [HttpPatch("{id}")]
         public async Task<IActionResult> Update(long id, [FromBody] Employee updatedEmployee)
         {
             if (!ModelState.IsValid)
