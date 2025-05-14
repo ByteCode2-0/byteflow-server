@@ -1,13 +1,15 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace byteflow_server.Models.DTOs
 {
     public class AttendanceReviewDto
     {
-        [Required(ErrorMessage = "Reviewer ID is required")]
-        public long ReviewerId { get; set; }
-
-        [Required(ErrorMessage = "Status is required")]
+        public long ReviewedBy { get; set; }
+        public DateTime CheckInTime { get; set; }
+        public DateTime? CheckOutTime { get; set; }
+        
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public AttendanceStatus Status { get; set; }
     }
 } 
