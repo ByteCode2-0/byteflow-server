@@ -27,7 +27,11 @@ namespace byteflow_server.Repositories
 
         public async Task<T?> GetByIdAsync(long id)
         {
+<<<<<<< HEAD
             var property = typeof(T).GetProperty("IsDeleted");
+=======
+            //var property = typeof(T).GetProperty("IsDeleted");
+>>>>>>> 3e3d22aa6650318bed56fe998edf7b41257168fa
             //if (property != null && property.PropertyType == typeof(bool?))
             //{
             //    return await _dbSet.Where(e => EF.Property<long>(e, "EmployeeId") == id && EF.Property<bool?>(e, "IsDeleted") != true).FirstOrDefaultAsync();
