@@ -100,7 +100,7 @@ namespace byteflow_server.Controllers
             return Ok(leaveRequest);
         }
 
-        [HttpGet("/reviewer/{id}")]
+        [HttpGet("reviewer/{id}")]
         public async Task<IActionResult> GetAllLeaveRequestsReview(long id)
         {
             var reviews = await _leaveService.GetAllLeaveRequestsReviewByAsync(id);
@@ -112,7 +112,7 @@ namespace byteflow_server.Controllers
         }
 
 
-        [HttpGet("/employee/{id}")]
+        [HttpGet("employee/{id}")]
         public async Task<IActionResult> GetLeaveRequestsByEmployeeId(long id)
         {
             var employee = await _leaveService.GetLeaveRequestsByEmployeeIdAsync(id);
