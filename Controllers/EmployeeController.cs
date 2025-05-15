@@ -72,9 +72,10 @@ namespace byteflow_server.Controllers
 
             return CreatedAtAction(nameof(GetById), new { id = result.Employee.EmployeeId }, result.Employee);
         }
-
+        // update employee
+        
         [Authorize(Roles = "Admin,Manager,Employee")]
-        [HttpPatch("{id}")]
+        [HttpPut("{id}")]
         public async Task<IActionResult> Update(long id, [FromBody] Employee updatedEmployee)
         {
             if (!ModelState.IsValid)
@@ -106,6 +107,23 @@ namespace byteflow_server.Controllers
             await _employeeService.DeleteEmployeeAsync(id);
             return NoContent(); 
         }
-       
+
+        [Authorize(Roles = "Admin,Manager,Employee")]
+        [HttpPatch("{id}")]
+        public async Task<IActionResult> PatchUpdate(long id, [FromBody] UserEmployeeUpdateDto updateDto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var result = await _employeeService.PatchUpdateUserEmployeeAsync(id, updateDto);
+            if (!result.Success)
+            {
+                return NotFound(result.Message);
+            }
+
+            return Ok(result.Employee);
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using byteflow_server.DataAccess;
 using byteflow_server.Models;
+using byteflow_server.Models.DTOs;
 using byteflow_server.Repositories;
 using byteflow_server.Services;
 using Microsoft.AspNetCore.Authorization;
@@ -9,7 +10,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace byteflow_server.Controllers
 {
     [Route("api/[controller]")]
-    public class UserController : Controller
+    [ApiController]
+    public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
 
@@ -89,7 +91,23 @@ namespace byteflow_server.Controllers
             await _userService.DeleteUserAsync(id);
             return NoContent();
         }
+
+        [Authorize(Roles = "Admin")]
+        [HttpPatch("{id}/role")]
+        public async Task<IActionResult> UpdateUserRole(long id, [FromBody] UserRoleUpdateDto roleUpdateDto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var result = await _userService.UpdateUserRoleAsync(id, roleUpdateDto);
+            if (!result.Success)
+            {
+                return NotFound(result.Message);
+            }
+
+            return Ok(new { message = result.Message });
+        }
     }
-
-
 }
