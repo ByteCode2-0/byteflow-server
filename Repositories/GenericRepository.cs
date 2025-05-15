@@ -16,18 +16,26 @@ namespace byteflow_server.Repositories
 
         public async Task<IEnumerable<T>> GetAllAsync()
         {
-            var property = typeof(T).GetProperty("IsDeleted");
-            if (property != null && property.PropertyType == typeof(bool?))
-            {
+            //var property = typeof(T).GetProperty("IsDeleted");
+            //if (property != null && property.PropertyType == typeof(bool?))
+            //{
                
-                return await _dbSet.Where(e => EF.Property<bool?>(e, "IsDeleted") != true).ToListAsync();
-            }
+            //    return await _dbSet.Where(e => EF.Property<bool?>(e, "IsDeleted") != true).ToListAsync();
+            //}
             return await _dbSet.ToListAsync();
         }
 
         public async Task<T?> GetByIdAsync(long id)
         {
+
+
             //var property = typeof(T).GetProperty("IsDeleted");
+
+            //var property = typeof(T).GetProperty("IsDeleted");
+
+
+            //var property = typeof(T).GetProperty("IsDeleted");
+
             //if (property != null && property.PropertyType == typeof(bool?))
             //{
             //    return await _dbSet.Where(e => EF.Property<long>(e, "EmployeeId") == id && EF.Property<bool?>(e, "IsDeleted") != true).FirstOrDefaultAsync();
@@ -48,17 +56,18 @@ namespace byteflow_server.Repositories
         public void Delete(T entity)
         {
             
-            var property = typeof(T).GetProperty("IsDeleted");
-            if (property != null && property.PropertyType == typeof(bool?))
-            {
+            //var property = typeof(T).GetProperty("IsDeleted");
+            //if (property != null && property.PropertyType == typeof(bool?))
+            //{
                
-                property.SetValue(entity, true);
-                Update(entity); 
-            }
-            else
-            {
-                throw new InvalidOperationException("Soft delete is not supported for this entity.");
-            }
+            //    property.SetValue(entity, true);
+            //    Update(entity); 
+            //}
+            //else
+            //{
+            //    throw new InvalidOperationException("Soft delete is not supported for this entity.");
+            //}
+            _dbSet.Remove(entity);
         }
 
         public async Task SaveChangesAsync()

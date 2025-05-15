@@ -51,7 +51,6 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 builder.Services.AddScoped<IAttendanceService, AttendanceService>();
 builder.Services.AddScoped<ILeaveService, LeaveService>();
-builder.Services.AddScoped<IDepartmentService, DepartmentService>();
 
 builder.Services.AddOpenApi();
 

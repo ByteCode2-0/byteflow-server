@@ -54,5 +54,19 @@ namespace byteflow_server.Services
                 await _leaveRepository.SaveChangesAsync();
             }
         }
+
+        public async Task<IEnumerable<LeaveRequest>> GetAllLeaveRequestsReviewByAsync(long id)
+        {
+            var leaveRequests = await _leaveRepository.GetAllAsync();
+          
+            return leaveRequests.Where(lr => lr.ReviewedBy == id).ToList();
+        }
+
+        public async Task<IEnumerable<LeaveRequest>> GetLeaveRequestsByEmployeeIdAsync(long id)
+        {
+            var leaveRequests = await _leaveRepository.GetAllAsync();
+
+            return leaveRequests.Where(lr => lr.EmployeeId == id).ToList();
+        }
     }
 }
