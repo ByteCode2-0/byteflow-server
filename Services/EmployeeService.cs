@@ -107,5 +107,43 @@ namespace byteflow_server.Services
                 await _employeeRepository.SaveChangesAsync();
             }
         }
+
+        public async Task<(bool Success, string Message, Employee? Employee)> PatchUpdateUserEmployeeAsync(long employeeId, UserEmployeeUpdateDto updateDto)
+        {
+            var employee = await _employeeRepository.GetByIdAsync(employeeId);
+            if (employee == null)
+            {
+                return (false, "Employee not found", null);
+            }
+
+            var user = await _userRepository.GetByIdAsync(employee.UserId);
+            if (user == null)
+            {
+                return (false, "User not found", null);
+            }
+
+            // Update user fields if provided
+            if (!string.IsNullOrEmpty(updateDto.UserName)) user.UserName = updateDto.UserName;
+            if (!string.IsNullOrEmpty(updateDto.Email)) user.Email = updateDto.Email;
+            if (!string.IsNullOrEmpty(updateDto.Password)) user.Password = updateDto.Password;
+
+            // Update employee fields if provided
+            if (!string.IsNullOrEmpty(updateDto.EmployeeName)) employee.EmployeeName = updateDto.EmployeeName;
+            if (updateDto.PhoneNumber.HasValue) employee.PhoneNumber = updateDto.PhoneNumber.Value;
+            if (updateDto.DepartmentId.HasValue) employee.DepartmentId = updateDto.DepartmentId.Value;
+            if (!string.IsNullOrEmpty(updateDto.Address)) employee.Address = updateDto.Address;
+            if (updateDto.DateOfBirth.HasValue) employee.DateOfBirth = updateDto.DateOfBirth.Value;
+            if (!string.IsNullOrEmpty(updateDto.PhotoUrl)) employee.PhotoUrl = updateDto.PhotoUrl;
+
+            employee.UpdatedAt = DateTime.UtcNow;
+            user.UpdatedAt = DateTime.UtcNow;
+
+            _userRepository.Update(user);
+            _employeeRepository.Update(employee);
+            await _userRepository.SaveChangesAsync();
+            await _employeeRepository.SaveChangesAsync();
+
+            return (true, "User and employee updated successfully", employee);
+        }
     }
 }

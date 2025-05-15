@@ -1,4 +1,3 @@
-using System.Text;
 using byteflow_server.DataAccess;
 using byteflow_server.Repositories;
 using byteflow_server.Services;
@@ -6,14 +5,20 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text.Json.Serialization;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
-        options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+        options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()); // For System.Text.Json
         options.JsonSerializerOptions.PropertyNamingPolicy = null;
+    })
+    .AddNewtonsoftJson(options =>
+    {
+        options.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.DefaultContractResolver(); // For PascalCase
+        options.SerializerSettings.Converters.Add(new Newtonsoft.Json.Converters.StringEnumConverter()); // For Enum as Strings
     });
 
 builder.Services.AddEndpointsApiExplorer();
@@ -46,14 +51,12 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 builder.Services.AddScoped<IAttendanceService, AttendanceService>();
 builder.Services.AddScoped<ILeaveService, LeaveService>();
+builder.Services.AddScoped<IDepartmentService, DepartmentService>();
 
-
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
-//Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
