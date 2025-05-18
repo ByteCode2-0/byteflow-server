@@ -106,6 +106,12 @@ namespace byteflow_server.Controllers
             await _employeeService.DeleteEmployeeAsync(id);
             return NoContent(); 
         }
-       
+        [HttpGet("reviewers")]
+        public async Task<IActionResult> GetReviewers()
+        {
+            var reviewers = await _employeeService.GetReviewersAsync();
+            return Ok(reviewers);
+        }
+
     }
 }

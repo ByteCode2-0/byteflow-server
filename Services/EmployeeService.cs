@@ -107,5 +107,19 @@ namespace byteflow_server.Services
                 await _employeeRepository.SaveChangesAsync();
             }
         }
+
+        public async Task<IEnumerable<Employee>> GetReviewersAsync()
+        {
+            var reviewers = await (
+                from e in _context.Employees
+                join u in _context.Users
+                    on e.UserId equals u.UserId
+                where u.Role == "Admin" || u.Role == "Manager"
+                select e
+            ).ToListAsync();
+
+           
+            return reviewers;
+        }
     }
 }
