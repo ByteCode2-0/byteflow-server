@@ -11,6 +11,6 @@ namespace byteflow_server.Services
         Task<(bool Success, string Message, Employee? Employee)> CreateEmployeeWithUserAsync(EmployeeCreateDto createDto);
         Task UpdateEmployeeAsync(Employee employee);
         Task DeleteEmployeeAsync(long id);
-        
+        Task<(bool Success, string Message, Employee? Employee)> PatchUpdateUserEmployeeAsync(long employeeId, UserEmployeeUpdateDto updateDto);
     }
 }

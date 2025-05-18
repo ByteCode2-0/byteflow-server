@@ -1,5 +1,6 @@
 ﻿using byteflow_server.DataAccess;
 using byteflow_server.Models;
+using byteflow_server.Models.DTOs;
 using byteflow_server.Repositories;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
@@ -55,7 +56,23 @@ namespace byteflow_server.Services
                 await _userRepository.SaveChangesAsync();
             }
         }
-        
+
+        public async Task<(bool Success, string Message)> UpdateUserRoleAsync(long userId, UserRoleUpdateDto roleUpdateDto)
+        {
+            var user = await _userRepository.GetByIdAsync(userId);
+            if (user == null)
+            {
+                return (false, "User not found");
+            }
+
+            user.Role = roleUpdateDto.Role;
+            user.UpdatedAt = DateTime.UtcNow;
+            
+            _userRepository.Update(user);
+            await _userRepository.SaveChangesAsync();
+            
+            return (true, "User role updated successfully");
+        }
     }
 
 }
