@@ -108,7 +108,7 @@ namespace byteflow_server.Services
             }
         }
 
-<<<<<<< HEAD
+
         public async Task<IEnumerable<Employee>> GetReviewersAsync()
         {
             var reviewers = await (
@@ -119,9 +119,10 @@ namespace byteflow_server.Services
                 select e
             ).ToListAsync();
 
-           
+
             return reviewers;
-=======
+        }
+
         public async Task<(bool Success, string Message, Employee? Employee)> PatchUpdateUserEmployeeAsync(long employeeId, UserEmployeeUpdateDto updateDto)
         {
             var employee = await _employeeRepository.GetByIdAsync(employeeId);
@@ -158,7 +159,7 @@ namespace byteflow_server.Services
             await _employeeRepository.SaveChangesAsync();
 
             return (true, "User and employee updated successfully", employee);
->>>>>>> c63932c973ed5979671424e5ba0b79ffcd4df0b1
+
         }
     }
 }

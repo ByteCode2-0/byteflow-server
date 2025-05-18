@@ -107,7 +107,7 @@ namespace byteflow_server.Controllers
             await _employeeService.DeleteEmployeeAsync(id);
             return NoContent(); 
         }
-<<<<<<< HEAD
+
         [HttpGet("reviewers")]
         public async Task<IActionResult> GetReviewers()
         {
@@ -115,7 +115,7 @@ namespace byteflow_server.Controllers
             return Ok(reviewers);
         }
 
-=======
+
 
         [Authorize(Roles = "Admin,Manager,Employee")]
         [HttpPatch("{id}")]
@@ -134,6 +134,5 @@ namespace byteflow_server.Controllers
 
             return Ok(result.Employee);
         }
->>>>>>> c63932c973ed5979671424e5ba0b79ffcd4df0b1
     }
 }
