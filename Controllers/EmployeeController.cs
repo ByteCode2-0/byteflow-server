@@ -108,6 +108,15 @@ namespace byteflow_server.Controllers
             return NoContent(); 
         }
 
+        [HttpGet("reviewers")]
+        public async Task<IActionResult> GetReviewers()
+        {
+            var reviewers = await _employeeService.GetReviewersAsync();
+            return Ok(reviewers);
+        }
+
+
+
         [Authorize(Roles = "Admin,Manager,Employee")]
         [HttpPatch("{id}")]
         public async Task<IActionResult> PatchUpdate(long id, [FromBody] UserEmployeeUpdateDto updateDto)
